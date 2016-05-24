@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC72C6931CF3C89100CAF231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72C6921CF3C89100CAF231 /* AppDelegate.swift */; };
+		CC72C6951CF3C89100CAF231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72C6941CF3C89100CAF231 /* ViewController.swift */; };
+		CC72C6981CF3C89100CAF231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC72C6961CF3C89100CAF231 /* Main.storyboard */; };
+		CC72C69A1CF3C89100CAF231 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC72C6991CF3C89100CAF231 /* Assets.xcassets */; };
+		CC72C69D1CF3C89100CAF231 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC72C69B1CF3C89100CAF231 /* LaunchScreen.storyboard */; };
+		CC72C6A71CF3C9CC00CAF231 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72C6A61CF3C9CC00CAF231 /* KeyboardView.swift */; };
+		CCE489921CF3F92D00E99677 /* Nxs_MIdi_ControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE489911CF3F92D00E99677 /* Nxs_MIdi_ControllerTests.swift */; };
+		CCE489991CF3FC0700E99677 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72C6A61CF3C9CC00CAF231 /* KeyboardView.swift */; };
+		CCE4899D1CF49BB300E99677 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4899C1CF49BB300E99677 /* Utils.swift */; };
+		CCE4899E1CF49C7B00E99677 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4899C1CF49BB300E99677 /* Utils.swift */; };
+		CCE489A01CF4A0E800E99677 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4899F1CF4A0E800E99677 /* Keys.swift */; };
+		CCE489A11CF4A83F00E99677 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4899F1CF4A0E800E99677 /* Keys.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCE489941CF3F92D00E99677 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC72C6871CF3C89100CAF231 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC72C68E1CF3C89100CAF231;
+			remoteInfo = "Nxs MIdi Controller";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC72C68F1CF3C89100CAF231 /* Nxs Midi Controller.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nxs Midi Controller.temp_caseinsensitive_rename.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC72C6921CF3C89100CAF231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC72C6941CF3C89100CAF231 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC72C6971CF3C89100CAF231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC72C6991CF3C89100CAF231 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC72C69C1CF3C89100CAF231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC72C69E1CF3C89100CAF231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC72C6A61CF3C9CC00CAF231 /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		CCE4898F1CF3F92D00E99677 /* Nxs Midi Controller.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nxs Midi Controller.temp_caseinsensitive_rename.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCE489911CF3F92D00E99677 /* Nxs_MIdi_ControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nxs_MIdi_ControllerTests.swift; sourceTree = "<group>"; };
+		CCE489931CF3F92D00E99677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCE4899C1CF49BB300E99677 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CCE4899F1CF4A0E800E99677 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC72C68C1CF3C89100CAF231 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE4898C1CF3F92D00E99677 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC72C6861CF3C89100CAF231 = {
+			isa = PBXGroup;
+			children = (
+				CC72C6911CF3C89100CAF231 /* Nxs Midi Controller */,
+				CCE489901CF3F92D00E99677 /* Nxs MIdi ControllerTests */,
+				CC72C6901CF3C89100CAF231 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC72C6901CF3C89100CAF231 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC72C68F1CF3C89100CAF231 /* Nxs Midi Controller.temp_caseinsensitive_rename.app */,
+				CCE4898F1CF3F92D00E99677 /* Nxs Midi Controller.temp_caseinsensitive_rename.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC72C6911CF3C89100CAF231 /* Nxs Midi Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCE4899C1CF49BB300E99677 /* Utils.swift */,
+				CC72C6A61CF3C9CC00CAF231 /* KeyboardView.swift */,
+				CCE4899F1CF4A0E800E99677 /* Keys.swift */,
+				CC72C6921CF3C89100CAF231 /* AppDelegate.swift */,
+				CC72C6941CF3C89100CAF231 /* ViewController.swift */,
+				CC72C6961CF3C89100CAF231 /* Main.storyboard */,
+				CC72C6991CF3C89100CAF231 /* Assets.xcassets */,
+				CC72C69B1CF3C89100CAF231 /* LaunchScreen.storyboard */,
+				CC72C69E1CF3C89100CAF231 /* Info.plist */,
+			);
+			name = "Nxs Midi Controller";
+			path = "Nxs MIdi Controller";
+			sourceTree = "<group>";
+		};
+		CCE489901CF3F92D00E99677 /* Nxs MIdi ControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCE489911CF3F92D00E99677 /* Nxs_MIdi_ControllerTests.swift */,
+				CCE489931CF3F92D00E99677 /* Info.plist */,
+			);
+			path = "Nxs MIdi ControllerTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC72C68E1CF3C89100CAF231 /* Nxs MIdi Controller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC72C6A11CF3C89100CAF231 /* Build configuration list for PBXNativeTarget "Nxs MIdi Controller" */;
+			buildPhases = (
+				CC72C68B1CF3C89100CAF231 /* Sources */,
+				CC72C68C1CF3C89100CAF231 /* Frameworks */,
+				CC72C68D1CF3C89100CAF231 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nxs MIdi Controller";
+			productName = "Nxs MIdi Controller";
+			productReference = CC72C68F1CF3C89100CAF231 /* Nxs Midi Controller.temp_caseinsensitive_rename.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCE4898E1CF3F92D00E99677 /* Nxs MIdi ControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCE489981CF3F92D00E99677 /* Build configuration list for PBXNativeTarget "Nxs MIdi ControllerTests" */;
+			buildPhases = (
+				CCE4898B1CF3F92D00E99677 /* Sources */,
+				CCE4898C1CF3F92D00E99677 /* Frameworks */,
+				CCE4898D1CF3F92D00E99677 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCE489951CF3F92D00E99677 /* PBXTargetDependency */,
+			);
+			name = "Nxs MIdi ControllerTests";
+			productName = "Nxs MIdi ControllerTests";
+			productReference = CCE4898F1CF3F92D00E99677 /* Nxs Midi Controller.temp_caseinsensitive_rename.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC72C6871CF3C89100CAF231 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Nexiosoft;
+				TargetAttributes = {
+					CC72C68E1CF3C89100CAF231 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					CCE4898E1CF3F92D00E99677 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = CC72C68E1CF3C89100CAF231;
+					};
+				};
+			};
+			buildConfigurationList = CC72C68A1CF3C89100CAF231 /* Build configuration list for PBXProject "Nxs Midi Controller" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC72C6861CF3C89100CAF231;
+			productRefGroup = CC72C6901CF3C89100CAF231 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC72C68E1CF3C89100CAF231 /* Nxs MIdi Controller */,
+				CCE4898E1CF3F92D00E99677 /* Nxs MIdi ControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC72C68D1CF3C89100CAF231 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC72C69D1CF3C89100CAF231 /* LaunchScreen.storyboard in Resources */,
+				CC72C69A1CF3C89100CAF231 /* Assets.xcassets in Resources */,
+				CC72C6981CF3C89100CAF231 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE4898D1CF3F92D00E99677 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC72C68B1CF3C89100CAF231 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC72C6A71CF3C9CC00CAF231 /* KeyboardView.swift in Sources */,
+				CC72C6951CF3C89100CAF231 /* ViewController.swift in Sources */,
+				CC72C6931CF3C89100CAF231 /* AppDelegate.swift in Sources */,
+				CCE4899D1CF49BB300E99677 /* Utils.swift in Sources */,
+				CCE489A01CF4A0E800E99677 /* Keys.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE4898B1CF3F92D00E99677 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCE489921CF3F92D00E99677 /* Nxs_MIdi_ControllerTests.swift in Sources */,
+				CCE489A11CF4A83F00E99677 /* Keys.swift in Sources */,
+				CCE489991CF3FC0700E99677 /* KeyboardView.swift in Sources */,
+				CCE4899E1CF49C7B00E99677 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCE489951CF3F92D00E99677 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC72C68E1CF3C89100CAF231 /* Nxs MIdi Controller */;
+			targetProxy = CCE489941CF3F92D00E99677 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC72C6961CF3C89100CAF231 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC72C6971CF3C89100CAF231 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC72C69B1CF3C89100CAF231 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC72C69C1CF3C89100CAF231 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC72C69F1CF3C89100CAF231 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC72C6A01CF3C89100CAF231 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC72C6A21CF3C89100CAF231 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Nxs MIdi Controller/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nexiosoft.Nxs-Midi-Controller";
+				PRODUCT_NAME = "Nxs Midi Controller.temp_caseinsensitive_rename";
+			};
+			name = Debug;
+		};
+		CC72C6A31CF3C89100CAF231 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Nxs MIdi Controller/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nexiosoft.Nxs-Midi-Controller";
+				PRODUCT_NAME = "Nxs Midi Controller.temp_caseinsensitive_rename";
+			};
+			name = Release;
+		};
+		CCE489961CF3F92D00E99677 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Nxs MIdi ControllerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nexiosoft.Nxs-MIdi-ControllerTests";
+				PRODUCT_NAME = "Nxs Midi Controller.temp_caseinsensitive_rename";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nxs Midi Controller.temp_caseinsensitive_rename.app/Nxs Midi Controller.temp_caseinsensitive_rename";
+			};
+			name = Debug;
+		};
+		CCE489971CF3F92D00E99677 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Nxs MIdi ControllerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nexiosoft.Nxs-MIdi-ControllerTests";
+				PRODUCT_NAME = "Nxs Midi Controller.temp_caseinsensitive_rename";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nxs Midi Controller.temp_caseinsensitive_rename.app/Nxs Midi Controller.temp_caseinsensitive_rename";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC72C68A1CF3C89100CAF231 /* Build configuration list for PBXProject "Nxs Midi Controller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC72C69F1CF3C89100CAF231 /* Debug */,
+				CC72C6A01CF3C89100CAF231 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC72C6A11CF3C89100CAF231 /* Build configuration list for PBXNativeTarget "Nxs MIdi Controller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC72C6A21CF3C89100CAF231 /* Debug */,
+				CC72C6A31CF3C89100CAF231 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCE489981CF3F92D00E99677 /* Build configuration list for PBXNativeTarget "Nxs MIdi ControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCE489961CF3F92D00E99677 /* Debug */,
+				CCE489971CF3F92D00E99677 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC72C6871CF3C89100CAF231 /* Project object */;
+}
