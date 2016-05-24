@@ -6,6 +6,8 @@
 //  Copyright © 2016 Nexiosoft. All rights reserved.
 //
 
+// TODO set private
+
 import UIKit
 
 enum KeyOffsetType {
@@ -99,6 +101,10 @@ func indexOfOffset(offset: CGFloat, arr: [CGFloat]) -> Int {
 //TODO replace all Int(ceil(horizScale)) with instance variable
 class KeyboardView: UIView {
     
+    typealias KeyboardCallback = ((Note) -> Void)
+    private var onPressCallbacks : [KeyboardCallback] = []
+    private var onReleaseCallbacks : [KeyboardCallback] = []
+    
     ///how many times a keyboard length (C to B) is visible on screen.
     ///1.0 means a keyboard with keys C to B
     var horizScale : Float = 1.2
@@ -119,12 +125,27 @@ class KeyboardView: UIView {
         let path : UIBezierPath = UIBezierPath(roundedRect: CGRect(x:0, y:0, width:20, height: 20) , cornerRadius: 10)
         UIColor.blackColor().setFill()
         path.fill()*/
+        multipleTouchEnabled = true// TODO move this to viewcontroller
         drawLowerKeys(rect)
         drawUpperKeys(rect)
     }
     
-    func addKeyPressedCallback(callback: ((Note) -> Void)) {
-        
+    func addKeyPressedCallback(callback: KeyboardCallback) {
+        onPressCallbacks.append(callback)
+    }
+    
+    func addKeyReleasedCallback(callback: KeyboardCallback) {
+        onReleaseCallbacks.append(callback)
+    }
+    
+    private func keyPressed(note: Note) {
+        onPressCallbacks.forEach {$0(note)}
+        print("key pressed.", note.kind, note.octave)
+    }
+    
+    private func keyReleased(note: Note) {
+        onReleaseCallbacks.forEach {$0(note)}
+        print("key released.", note.kind, note.octave)
     }
     
     func isInUpperSection(y: CGFloat) -> Bool {
@@ -154,16 +175,29 @@ class KeyboardView: UIView {
             }
         }
     }
+
+    var activeTouches : [(UITouch,Note)] = []
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         touches.forEach {
             let (x,y) = ($0.locationInView(self).x, $0.locationInView(self).y)
-            if isInUpperSection(y) {
-                let note = noteForKeyTouchedUpper(x)
-                print(note.kind, note.octave)
-            } else {
-                let note = noteForKeyTouchedLower(x)
-                print(note.kind, note.octave)
+            let note = isInUpperSection(y) ? noteForKeyTouchedUpper(x) : noteForKeyTouchedLower(x)
+            activeTouches.append(($0, note))
+            keyPressed(note)
+        }
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        touches.forEach {touch in
+            for i in 0..<activeTouches.count {
+                if i < 0 || i >= activeTouches.count {
+                    continue
+                }
+                let (t,n) = activeTouches[i]
+                if t == touch {
+                    activeTouches.removeAtIndex(i)
+                    keyReleased(n)
+                }
             }
         }
     }
