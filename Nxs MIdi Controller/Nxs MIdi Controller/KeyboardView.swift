@@ -114,6 +114,7 @@ class KeyboardView: UIView {
             return standardTopOffsetsWithScale(horizScale, width: Float(self.frame.width)).map {CGFloat($0)}
         }
     }
+    
     var scaledOffsetsBottom : [CGFloat] {
         get {
             return standardBottomOffsetsWithScale(horizScale, width: Float(self.frame.width)).map {CGFloat($0)}

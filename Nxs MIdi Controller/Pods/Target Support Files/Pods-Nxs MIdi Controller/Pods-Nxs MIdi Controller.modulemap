@@ -1,0 +1,6 @@
+framework module Pods_Nxs_MIdi_Controller {
+  umbrella header "Pods-Nxs MIdi Controller-umbrella.h"
+
+  export *
+  module * { export * }
+}
