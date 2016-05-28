@@ -3,6 +3,8 @@
 
 #include <QObject>
 #include <QQmlListProperty>
+
+#include "messagedecoder.h"
 #include "midisystem.h"
 
 //impl property
@@ -22,9 +24,11 @@ public:
 
 signals:
     void port_names_did_change();
-public slots:
+
 private:
     MidiSystem m_midi_system;
+    MessageDecoder *m_message_decoder;
+
 };
 
 #endif // APPMANAGER_H

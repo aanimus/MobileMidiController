@@ -31,7 +31,7 @@ Window {
             onCurrentTextChanged: {
                 if (currentText != "--") {
                     console.log("selected text = " + currentText);
-                    app.selectPortText("asd");
+                    app.selectPortText(currentText);
                 }
             }
 

@@ -1,1017 +1,517 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0285800CD4A1A5C235724EFC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>322656A4EAF4F124E81AD91B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>585C8678396BA22ED86F1DC1</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5CB92D48FB251E07A0479691</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>71CE57BFCC39080452EEF7B5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>7487DF9CAECE65063915AD29</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9A0566FA190060112CB01560</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5CB92D48FB251E07A0479691</string>
-				<string>7487DF9CAECE65063915AD29</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C158142EA8D9AC479D9067E9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>585C8678396BA22ED86F1DC1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CC72C6861CF3C89100CAF231</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CC72C6911CF3C89100CAF231</string>
-				<string>CCE489901CF3F92D00E99677</string>
-				<string>CC72C6901CF3C89100CAF231</string>
-				<string>9A0566FA190060112CB01560</string>
-				<string>E2D8F0A722D954EE34CA4B11</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC72C6871CF3C89100CAF231</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Nexiosoft</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>CC72C68E1CF3C89100CAF231</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-					</dict>
-					<key>CCE4898E1CF3F92D00E99677</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-						<key>TestTargetID</key>
-						<string>CC72C68E1CF3C89100CAF231</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>CC72C68A1CF3C89100CAF231</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>CC72C6861CF3C89100CAF231</string>
-			<key>productRefGroup</key>
-			<string>CC72C6901CF3C89100CAF231</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>CC72C68E1CF3C89100CAF231</string>
-				<string>CCE4898E1CF3F92D00E99677</string>
-			</array>
-		</dict>
-		<key>CC72C68A1CF3C89100CAF231</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>CC72C69F1CF3C89100CAF231</string>
-				<string>CC72C6A01CF3C89100CAF231</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CC72C68B1CF3C89100CAF231</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CC72C6A71CF3C9CC00CAF231</string>
-				<string>CC72C6951CF3C89100CAF231</string>
-				<string>CC72C6931CF3C89100CAF231</string>
-				<string>CCE4899D1CF49BB300E99677</string>
-				<string>CCE489A01CF4A0E800E99677</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CC72C68C1CF3C89100CAF231</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C158142EA8D9AC479D9067E9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CC72C68D1CF3C89100CAF231</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CC72C69D1CF3C89100CAF231</string>
-				<string>CC72C69A1CF3C89100CAF231</string>
-				<string>CC72C6981CF3C89100CAF231</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CC72C68E1CF3C89100CAF231</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>CC72C6A11CF3C89100CAF231</string>
-			<key>buildPhases</key>
-			<array>
-				<string>0285800CD4A1A5C235724EFC</string>
-				<string>CC72C68B1CF3C89100CAF231</string>
-				<string>CC72C68C1CF3C89100CAF231</string>
-				<string>CC72C68D1CF3C89100CAF231</string>
-				<string>71CE57BFCC39080452EEF7B5</string>
-				<string>322656A4EAF4F124E81AD91B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Nxs MIdi Controller</string>
-			<key>productName</key>
-			<string>Nxs MIdi Controller</string>
-			<key>productReference</key>
-			<string>CC72C68F1CF3C89100CAF231</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>CC72C68F1CF3C89100CAF231</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Nxs Midi Controller.temp_caseinsensitive_rename.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>CC72C6901CF3C89100CAF231</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CC72C68F1CF3C89100CAF231</string>
-				<string>CCE4898F1CF3F92D00E99677</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC72C6911CF3C89100CAF231</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CCE4899C1CF49BB300E99677</string>
-				<string>CC72C6A61CF3C9CC00CAF231</string>
-				<string>CCE4899F1CF4A0E800E99677</string>
-				<string>CC72C6921CF3C89100CAF231</string>
-				<string>CC72C6941CF3C89100CAF231</string>
-				<string>CC72C6961CF3C89100CAF231</string>
-				<string>CC72C6991CF3C89100CAF231</string>
-				<string>CC72C69B1CF3C89100CAF231</string>
-				<string>CC72C69E1CF3C89100CAF231</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Nxs Midi Controller</string>
-			<key>path</key>
-			<string>Nxs MIdi Controller</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC72C6921CF3C89100CAF231</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC72C6931CF3C89100CAF231</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CC72C6921CF3C89100CAF231</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CC72C6941CF3C89100CAF231</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC72C6951CF3C89100CAF231</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CC72C6941CF3C89100CAF231</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CC72C6961CF3C89100CAF231</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CC72C6971CF3C89100CAF231</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC72C6971CF3C89100CAF231</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC72C6981CF3C89100CAF231</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CC72C6961CF3C89100CAF231</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CC72C6991CF3C89100CAF231</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC72C69A1CF3C89100CAF231</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CC72C6991CF3C89100CAF231</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CC72C69B1CF3C89100CAF231</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CC72C69C1CF3C89100CAF231</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC72C69C1CF3C89100CAF231</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC72C69D1CF3C89100CAF231</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CC72C69B1CF3C89100CAF231</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CC72C69E1CF3C89100CAF231</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC72C69F1CF3C89100CAF231</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>CC72C6A01CF3C89100CAF231</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CC72C6A11CF3C89100CAF231</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>CC72C6A21CF3C89100CAF231</string>
-				<string>CC72C6A31CF3C89100CAF231</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CC72C6A21CF3C89100CAF231</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>5CB92D48FB251E07A0479691</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Nxs MIdi Controller/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.2</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.nexiosoft.Nxs-Midi-Controller</string>
-				<key>PRODUCT_NAME</key>
-				<string>Nxs Midi Controller.temp_caseinsensitive_rename</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>CC72C6A31CF3C89100CAF231</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>7487DF9CAECE65063915AD29</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Nxs MIdi Controller/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.2</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.nexiosoft.Nxs-Midi-Controller</string>
-				<key>PRODUCT_NAME</key>
-				<string>Nxs Midi Controller.temp_caseinsensitive_rename</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CC72C6A61CF3C9CC00CAF231</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>KeyboardView.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC72C6A71CF3C9CC00CAF231</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CC72C6A61CF3C9CC00CAF231</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CCE4898B1CF3F92D00E99677</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CCE489921CF3F92D00E99677</string>
-				<string>CCE489A11CF4A83F00E99677</string>
-				<string>CCE489991CF3FC0700E99677</string>
-				<string>CCE4899E1CF49C7B00E99677</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CCE4898C1CF3F92D00E99677</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CCE4898D1CF3F92D00E99677</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CCE4898E1CF3F92D00E99677</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>CCE489981CF3F92D00E99677</string>
-			<key>buildPhases</key>
-			<array>
-				<string>CCE4898B1CF3F92D00E99677</string>
-				<string>CCE4898C1CF3F92D00E99677</string>
-				<string>CCE4898D1CF3F92D00E99677</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>CCE489951CF3F92D00E99677</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Nxs MIdi ControllerTests</string>
-			<key>productName</key>
-			<string>Nxs MIdi ControllerTests</string>
-			<key>productReference</key>
-			<string>CCE4898F1CF3F92D00E99677</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>CCE4898F1CF3F92D00E99677</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Nxs Midi Controller.temp_caseinsensitive_rename.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>CCE489901CF3F92D00E99677</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CCE489911CF3F92D00E99677</string>
-				<string>CCE489931CF3F92D00E99677</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Nxs MIdi ControllerTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CCE489911CF3F92D00E99677</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Nxs_MIdi_ControllerTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CCE489921CF3F92D00E99677</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CCE489911CF3F92D00E99677</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CCE489931CF3F92D00E99677</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CCE489941CF3F92D00E99677</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>CC72C6871CF3C89100CAF231</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>CC72C68E1CF3C89100CAF231</string>
-			<key>remoteInfo</key>
-			<string>Nxs MIdi Controller</string>
-		</dict>
-		<key>CCE489951CF3F92D00E99677</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>CC72C68E1CF3C89100CAF231</string>
-			<key>targetProxy</key>
-			<string>CCE489941CF3F92D00E99677</string>
-		</dict>
-		<key>CCE489961CF3F92D00E99677</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Nxs MIdi ControllerTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.nexiosoft.Nxs-MIdi-ControllerTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>Nxs Midi Controller.temp_caseinsensitive_rename</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Nxs Midi Controller.temp_caseinsensitive_rename.app/Nxs Midi Controller.temp_caseinsensitive_rename</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>CCE489971CF3F92D00E99677</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Nxs MIdi ControllerTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.nexiosoft.Nxs-MIdi-ControllerTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>Nxs Midi Controller.temp_caseinsensitive_rename</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Nxs Midi Controller.temp_caseinsensitive_rename.app/Nxs Midi Controller.temp_caseinsensitive_rename</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CCE489981CF3F92D00E99677</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>CCE489961CF3F92D00E99677</string>
-				<string>CCE489971CF3F92D00E99677</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CCE489991CF3FC0700E99677</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CC72C6A61CF3C9CC00CAF231</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CCE4899C1CF49BB300E99677</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Utils.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CCE4899D1CF49BB300E99677</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CCE4899C1CF49BB300E99677</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CCE4899E1CF49C7B00E99677</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CCE4899C1CF49BB300E99677</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CCE4899F1CF4A0E800E99677</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Keys.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CCE489A01CF4A0E800E99677</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CCE4899F1CF4A0E800E99677</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CCE489A11CF4A83F00E99677</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CCE4899F1CF4A0E800E99677</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E2D8F0A722D954EE34CA4B11</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>585C8678396BA22ED86F1DC1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>CC72C6871CF3C89100CAF231</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C158142EA8D9AC479D9067E9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585C8678396BA22ED86F1DC1 /* Pods.framework */; };
+		CC04FEBA1CF5657700E9CDCE /* MessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC04FEB91CF5657700E9CDCE /* MessageSender.swift */; };
+		CC04FEBC1CF9F3E500E9CDCE /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC04FEBB1CF9F3E500E9CDCE /* WheelView.swift */; };
+		CC72C6931CF3C89100CAF231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72C6921CF3C89100CAF231 /* AppDelegate.swift */; };
+		CC72C6951CF3C89100CAF231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72C6941CF3C89100CAF231 /* ViewController.swift */; };
+		CC72C6981CF3C89100CAF231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC72C6961CF3C89100CAF231 /* Main.storyboard */; };
+		CC72C69A1CF3C89100CAF231 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC72C6991CF3C89100CAF231 /* Assets.xcassets */; };
+		CC72C69D1CF3C89100CAF231 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC72C69B1CF3C89100CAF231 /* LaunchScreen.storyboard */; };
+		CC72C6A71CF3C9CC00CAF231 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72C6A61CF3C9CC00CAF231 /* KeyboardView.swift */; };
+		CCD7555E1CF553CD0082AEC2 /* MessageEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7555D1CF553CD0082AEC2 /* MessageEncoding.swift */; };
+		CCE489921CF3F92D00E99677 /* Nxs_MIdi_ControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE489911CF3F92D00E99677 /* Nxs_MIdi_ControllerTests.swift */; };
+		CCE489991CF3FC0700E99677 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72C6A61CF3C9CC00CAF231 /* KeyboardView.swift */; };
+		CCE4899D1CF49BB300E99677 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4899C1CF49BB300E99677 /* Utils.swift */; };
+		CCE4899E1CF49C7B00E99677 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4899C1CF49BB300E99677 /* Utils.swift */; };
+		CCE489A01CF4A0E800E99677 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4899F1CF4A0E800E99677 /* Keys.swift */; };
+		CCE489A11CF4A83F00E99677 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4899F1CF4A0E800E99677 /* Keys.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCE489941CF3F92D00E99677 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC72C6871CF3C89100CAF231 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC72C68E1CF3C89100CAF231;
+			remoteInfo = "Nxs MIdi Controller";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		585C8678396BA22ED86F1DC1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CB92D48FB251E07A0479691 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7487DF9CAECE65063915AD29 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CC04FEB91CF5657700E9CDCE /* MessageSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageSender.swift; sourceTree = "<group>"; };
+		CC04FEBB1CF9F3E500E9CDCE /* WheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
+		CC72C68F1CF3C89100CAF231 /* Nxs Midi Controller.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nxs Midi Controller.temp_caseinsensitive_rename.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC72C6921CF3C89100CAF231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC72C6941CF3C89100CAF231 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC72C6971CF3C89100CAF231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC72C6991CF3C89100CAF231 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC72C69C1CF3C89100CAF231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC72C69E1CF3C89100CAF231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC72C6A61CF3C9CC00CAF231 /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		CCD7555D1CF553CD0082AEC2 /* MessageEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageEncoding.swift; sourceTree = "<group>"; };
+		CCE4898F1CF3F92D00E99677 /* Nxs Midi Controller.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nxs Midi Controller.temp_caseinsensitive_rename.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCE489911CF3F92D00E99677 /* Nxs_MIdi_ControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nxs_MIdi_ControllerTests.swift; sourceTree = "<group>"; };
+		CCE489931CF3F92D00E99677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCE4899C1CF49BB300E99677 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CCE4899F1CF4A0E800E99677 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC72C68C1CF3C89100CAF231 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C158142EA8D9AC479D9067E9 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE4898C1CF3F92D00E99677 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A0566FA190060112CB01560 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5CB92D48FB251E07A0479691 /* Pods.debug.xcconfig */,
+				7487DF9CAECE65063915AD29 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CC72C6861CF3C89100CAF231 = {
+			isa = PBXGroup;
+			children = (
+				CC72C6911CF3C89100CAF231 /* Nxs Midi Controller */,
+				CCE489901CF3F92D00E99677 /* Nxs MIdi ControllerTests */,
+				CC72C6901CF3C89100CAF231 /* Products */,
+				9A0566FA190060112CB01560 /* Pods */,
+				E2D8F0A722D954EE34CA4B11 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CC72C6901CF3C89100CAF231 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC72C68F1CF3C89100CAF231 /* Nxs Midi Controller.temp_caseinsensitive_rename.app */,
+				CCE4898F1CF3F92D00E99677 /* Nxs Midi Controller.temp_caseinsensitive_rename.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC72C6911CF3C89100CAF231 /* Nxs Midi Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCE4899C1CF49BB300E99677 /* Utils.swift */,
+				CC72C6A61CF3C9CC00CAF231 /* KeyboardView.swift */,
+				CCE4899F1CF4A0E800E99677 /* Keys.swift */,
+				CC72C6921CF3C89100CAF231 /* AppDelegate.swift */,
+				CC72C6941CF3C89100CAF231 /* ViewController.swift */,
+				CCD7555D1CF553CD0082AEC2 /* MessageEncoding.swift */,
+				CC04FEB91CF5657700E9CDCE /* MessageSender.swift */,
+				CC72C6961CF3C89100CAF231 /* Main.storyboard */,
+				CC04FEBB1CF9F3E500E9CDCE /* WheelView.swift */,
+				CC72C6991CF3C89100CAF231 /* Assets.xcassets */,
+				CC72C69B1CF3C89100CAF231 /* LaunchScreen.storyboard */,
+				CC72C69E1CF3C89100CAF231 /* Info.plist */,
+			);
+			name = "Nxs Midi Controller";
+			path = "Nxs MIdi Controller";
+			sourceTree = "<group>";
+		};
+		CCE489901CF3F92D00E99677 /* Nxs MIdi ControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCE489911CF3F92D00E99677 /* Nxs_MIdi_ControllerTests.swift */,
+				CCE489931CF3F92D00E99677 /* Info.plist */,
+			);
+			path = "Nxs MIdi ControllerTests";
+			sourceTree = "<group>";
+		};
+		E2D8F0A722D954EE34CA4B11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				585C8678396BA22ED86F1DC1 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC72C68E1CF3C89100CAF231 /* Nxs MIdi Controller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC72C6A11CF3C89100CAF231 /* Build configuration list for PBXNativeTarget "Nxs MIdi Controller" */;
+			buildPhases = (
+				0285800CD4A1A5C235724EFC /* Check Pods Manifest.lock */,
+				CC72C68B1CF3C89100CAF231 /* Sources */,
+				CC72C68C1CF3C89100CAF231 /* Frameworks */,
+				CC72C68D1CF3C89100CAF231 /* Resources */,
+				71CE57BFCC39080452EEF7B5 /* Embed Pods Frameworks */,
+				322656A4EAF4F124E81AD91B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nxs MIdi Controller";
+			productName = "Nxs MIdi Controller";
+			productReference = CC72C68F1CF3C89100CAF231 /* Nxs Midi Controller.temp_caseinsensitive_rename.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCE4898E1CF3F92D00E99677 /* Nxs MIdi ControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCE489981CF3F92D00E99677 /* Build configuration list for PBXNativeTarget "Nxs MIdi ControllerTests" */;
+			buildPhases = (
+				CCE4898B1CF3F92D00E99677 /* Sources */,
+				CCE4898C1CF3F92D00E99677 /* Frameworks */,
+				CCE4898D1CF3F92D00E99677 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCE489951CF3F92D00E99677 /* PBXTargetDependency */,
+			);
+			name = "Nxs MIdi ControllerTests";
+			productName = "Nxs MIdi ControllerTests";
+			productReference = CCE4898F1CF3F92D00E99677 /* Nxs Midi Controller.temp_caseinsensitive_rename.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC72C6871CF3C89100CAF231 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Nexiosoft;
+				TargetAttributes = {
+					CC72C68E1CF3C89100CAF231 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					CCE4898E1CF3F92D00E99677 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = CC72C68E1CF3C89100CAF231;
+					};
+				};
+			};
+			buildConfigurationList = CC72C68A1CF3C89100CAF231 /* Build configuration list for PBXProject "Nxs Midi Controller" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC72C6861CF3C89100CAF231;
+			productRefGroup = CC72C6901CF3C89100CAF231 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC72C68E1CF3C89100CAF231 /* Nxs MIdi Controller */,
+				CCE4898E1CF3F92D00E99677 /* Nxs MIdi ControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC72C68D1CF3C89100CAF231 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC72C69D1CF3C89100CAF231 /* LaunchScreen.storyboard in Resources */,
+				CC72C69A1CF3C89100CAF231 /* Assets.xcassets in Resources */,
+				CC72C6981CF3C89100CAF231 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE4898D1CF3F92D00E99677 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0285800CD4A1A5C235724EFC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		322656A4EAF4F124E81AD91B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71CE57BFCC39080452EEF7B5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC72C68B1CF3C89100CAF231 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCD7555E1CF553CD0082AEC2 /* MessageEncoding.swift in Sources */,
+				CC72C6A71CF3C9CC00CAF231 /* KeyboardView.swift in Sources */,
+				CC04FEBC1CF9F3E500E9CDCE /* WheelView.swift in Sources */,
+				CC72C6951CF3C89100CAF231 /* ViewController.swift in Sources */,
+				CC04FEBA1CF5657700E9CDCE /* MessageSender.swift in Sources */,
+				CC72C6931CF3C89100CAF231 /* AppDelegate.swift in Sources */,
+				CCE4899D1CF49BB300E99677 /* Utils.swift in Sources */,
+				CCE489A01CF4A0E800E99677 /* Keys.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE4898B1CF3F92D00E99677 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCE489921CF3F92D00E99677 /* Nxs_MIdi_ControllerTests.swift in Sources */,
+				CCE489A11CF4A83F00E99677 /* Keys.swift in Sources */,
+				CCE489991CF3FC0700E99677 /* KeyboardView.swift in Sources */,
+				CCE4899E1CF49C7B00E99677 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCE489951CF3F92D00E99677 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC72C68E1CF3C89100CAF231 /* Nxs MIdi Controller */;
+			targetProxy = CCE489941CF3F92D00E99677 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC72C6961CF3C89100CAF231 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC72C6971CF3C89100CAF231 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC72C69B1CF3C89100CAF231 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC72C69C1CF3C89100CAF231 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC72C69F1CF3C89100CAF231 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC72C6A01CF3C89100CAF231 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC72C6A21CF3C89100CAF231 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CB92D48FB251E07A0479691 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Nxs MIdi Controller/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nexiosoft.Nxs-Midi-Controller";
+				PRODUCT_NAME = "Nxs Midi Controller.temp_caseinsensitive_rename";
+			};
+			name = Debug;
+		};
+		CC72C6A31CF3C89100CAF231 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7487DF9CAECE65063915AD29 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Nxs MIdi Controller/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nexiosoft.Nxs-Midi-Controller";
+				PRODUCT_NAME = "Nxs Midi Controller.temp_caseinsensitive_rename";
+			};
+			name = Release;
+		};
+		CCE489961CF3F92D00E99677 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Nxs MIdi ControllerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nexiosoft.Nxs-MIdi-ControllerTests";
+				PRODUCT_NAME = "Nxs Midi Controller.temp_caseinsensitive_rename";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nxs Midi Controller.temp_caseinsensitive_rename.app/Nxs Midi Controller.temp_caseinsensitive_rename";
+			};
+			name = Debug;
+		};
+		CCE489971CF3F92D00E99677 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Nxs MIdi ControllerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nexiosoft.Nxs-MIdi-ControllerTests";
+				PRODUCT_NAME = "Nxs Midi Controller.temp_caseinsensitive_rename";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nxs Midi Controller.temp_caseinsensitive_rename.app/Nxs Midi Controller.temp_caseinsensitive_rename";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC72C68A1CF3C89100CAF231 /* Build configuration list for PBXProject "Nxs Midi Controller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC72C69F1CF3C89100CAF231 /* Debug */,
+				CC72C6A01CF3C89100CAF231 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC72C6A11CF3C89100CAF231 /* Build configuration list for PBXNativeTarget "Nxs MIdi Controller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC72C6A21CF3C89100CAF231 /* Debug */,
+				CC72C6A31CF3C89100CAF231 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCE489981CF3F92D00E99677 /* Build configuration list for PBXNativeTarget "Nxs MIdi ControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCE489961CF3F92D00E99677 /* Debug */,
+				CCE489971CF3F92D00E99677 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC72C6871CF3C89100CAF231 /* Project object */;
+}

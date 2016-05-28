@@ -19,6 +19,7 @@ bool MidiSystem::open_port(int port_num)
 {
     try {
         m_midiout->openPort(port_num);
+        qDebug("successfully opened port");
     } catch (RtMidiError &err) {
         err.printMessage();
         return false;
@@ -27,6 +28,7 @@ bool MidiSystem::open_port(int port_num)
 }
 
 bool MidiSystem::open_port(std::string port_name) {
+    qDebug(port_name.data());
     auto mp = map_of_ports();
     if (mp.count(port_name)>0) {
         return open_port(mp[port_name]);
@@ -37,6 +39,7 @@ bool MidiSystem::open_port(std::string port_name) {
 
 bool MidiSystem::send_message(MidiMessage msg)
 {
+    qDebug("sending message.");
     std::vector<unsigned char> msgvec = msg.toVector();
     try {
         m_midiout->sendMessage(&msgvec);

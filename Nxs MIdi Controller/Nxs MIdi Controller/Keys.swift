@@ -15,6 +15,38 @@ enum NoteKind {
     case C, Cs, D, Ds, E, F, Fs, G, Gs, A, As, B
 }
 
+/**
+ * converts k to k0 in midi
+ */
+func noteKindToMidiZero(k: NoteKind) -> UInt8 {
+    switch k {
+    case .C:
+        return 0x18
+    case .Cs:
+        return 0x19
+    case .D:
+        return 0x1a
+    case .Ds:
+        return 0x1b
+    case .E:
+        return 0x1c
+    case .F:
+        return 0x1d
+    case .Fs:
+        return 0x1e
+    case .G:
+        return 0x1f
+    case .Gs:
+        return 0x20
+    case .A:
+        return 0x21
+    case .As:
+        return 0x22
+    case .B:
+        return 0x23
+    }
+}
+
 struct Note {
     var kind : NoteKind
     var octave : Int
@@ -22,6 +54,10 @@ struct Note {
     init(k: NoteKind, o: Int) {
         self.kind = k
         self.octave = o
+    }
+    
+    func toMidiNote() -> UInt8 {
+        return noteKindToMidiZero(self.kind) + UInt8(12 * self.octave)
     }
 }
 

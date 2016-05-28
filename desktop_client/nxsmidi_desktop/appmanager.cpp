@@ -3,6 +3,10 @@
 AppManager::AppManager(QObject *parent) : QObject(parent)
 {
     emit port_names_did_change();
+    m_message_decoder = new MessageDecoder(this);
+    m_message_decoder->setProcessMidiMessage([&](MidiMessage msg){
+        m_midi_system.send_message(msg);
+    });
 }
 
 QStringList AppManager::get_port_names() {
