@@ -8,10 +8,11 @@
 
 import UIKit
 
-private let indicatorHeight : CGFloat = 40.0
+private let indicatorHeight : CGFloat = 80.0
 
 typealias WheelFactor = Float
 
+@IBDesignable
 class WheelView: UIView {
     
     var wheelDidChangeCallbacks : [(WheelFactor) -> ()] = []
@@ -34,11 +35,11 @@ class WheelView: UIView {
     }
     
     override func drawRect(rect: CGRect) {
-        let h_2 = rect.height / 2
-        let yPos : CGFloat = h_2 * (1 - wheelOffset) - indicatorHeight / 2
-        let bPath = UIBezierPath(rect: CGRect(x: rect.minX, y: yPos, width: rect.width, height: indicatorHeight))
+        let y = rect.origin.y + rect.height/2 - indicatorHeight/2 - wheelOffset * rect.height/2
+        let r = CGRect(x: rect.origin.x, y: y,
+                       width: rect.width, height: indicatorHeight)
         UIColor.blackColor().setFill()
-        bPath.fill()
+        UIBezierPath(rect: r).fill()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

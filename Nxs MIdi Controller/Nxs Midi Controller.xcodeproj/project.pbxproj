@@ -23,6 +23,7 @@
 		CCE4899E1CF49C7B00E99677 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4899C1CF49BB300E99677 /* Utils.swift */; };
 		CCE489A01CF4A0E800E99677 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4899F1CF4A0E800E99677 /* Keys.swift */; };
 		CCE489A11CF4A83F00E99677 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4899F1CF4A0E800E99677 /* Keys.swift */; };
+		CCFD96A41D09B3B2006843CA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD96A31D09B3B2006843CA /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		CCE489931CF3F92D00E99677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCE4899C1CF49BB300E99677 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		CCE4899F1CF4A0E800E99677 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		CCFD96A31D09B3B2006843CA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				CCD7555D1CF553CD0082AEC2 /* MessageEncoding.swift */,
 				CC04FEB91CF5657700E9CDCE /* MessageSender.swift */,
 				CC72C6961CF3C89100CAF231 /* Main.storyboard */,
+				CCFD96A31D09B3B2006843CA /* SettingsViewController.swift */,
 				CC04FEBB1CF9F3E500E9CDCE /* WheelView.swift */,
 				CC72C6991CF3C89100CAF231 /* Assets.xcassets */,
 				CC72C69B1CF3C89100CAF231 /* LaunchScreen.storyboard */,
@@ -302,6 +305,7 @@
 				CC72C6931CF3C89100CAF231 /* AppDelegate.swift in Sources */,
 				CCE4899D1CF49BB300E99677 /* Utils.swift in Sources */,
 				CCE489A01CF4A0E800E99677 /* Keys.swift in Sources */,
+				CCFD96A41D09B3B2006843CA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

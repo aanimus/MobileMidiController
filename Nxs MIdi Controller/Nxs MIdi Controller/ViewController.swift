@@ -35,12 +35,14 @@ class ViewController: UIViewController {
         pitchBendView.onWheelChanged {
             let msg = Message.encodeMidiPitchBend($0, factor: 1.0)
             self.messageSender.sendMessage(msg)
+            print("pitch")
         }
         
         modulationView.maintainPositionAfterTouch = true
         modulationView.onWheelChanged {
             let msg = Message.encodeMidiModulation($0)
             self.messageSender.sendMessage(msg)
+            print("mod")
         }
     }
     
@@ -67,9 +69,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        modulationView.backgroundColor = UIColor(white: 0.8, alpha: 1.0)
+        pitchBendView.backgroundColor = UIColor(white: 0.8, alpha: 1.0)
         setupKeyboardCallbacks()
         setupWheels()
         updateUI()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {

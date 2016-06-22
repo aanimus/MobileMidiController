@@ -19,7 +19,7 @@ private func offsetAmount(type: KeyOffsetType) -> Float {
     case .OffsetL:
         return 1.0
     case .OffsetBlack:
-        return 0.7
+        return 0.8
     case .OffsetMiddle:
         return 0.8
     case .OffsetFull:
@@ -121,6 +121,22 @@ class KeyboardView: UIView {
         }
     }
     
+    lazy var blackKeyBottomImage: UIImage = {
+        guard let img = UIImage(named: "blackKey_lower") else {
+            print("Error: could not find blackKey_lower image file")
+            abort();
+        }
+        return img
+    }()
+    
+    lazy var blackKeyUpperImage: UIImage = {
+        guard let img = UIImage(named: "blackKey_upper") else {
+            print("Error: could not find blackKey_upper image file")
+            abort();
+        }
+        return img
+    }()
+    
     override func drawRect(rect: CGRect) {
         /*
         let path : UIBezierPath = UIBezierPath(roundedRect: CGRect(x:0, y:0, width:20, height: 20) , cornerRadius: 10)
@@ -168,9 +184,17 @@ class KeyboardView: UIView {
         
         for i in 1..<offsets.count {
             if offsetTypes[i-1] == KeyOffsetType.OffsetBlack {
-                let (left, right) = (offsets[i-1], offsets[i])
-                let b = UIBezierPath(rect: CGRect(x: CGFloat(left), y: 0.0, width: CGFloat(right - left), height: rect.height * topKeyScale))
-                b.fill()
+                let (left, right) = (CGFloat(offsets[i-1]), CGFloat(offsets[i]))
+                
+                let rectWidth = CGFloat(right - left);
+                let rectHeight = rectWidth * blackKeyBottomImage.size.height / blackKeyBottomImage.size.width
+                let rectY = rect.height * topKeyScale - rectHeight
+                
+                let bottomRect = CGRect(x: left, y: rectY, width: rectWidth, height: rectHeight)
+                blackKeyBottomImage.drawInRect(bottomRect)
+                
+                let topRect = CGRect(x: left, y: 0, width: rectWidth, height: rectY+1)
+                blackKeyUpperImage.drawInRect(topRect)
             }
         }
     }
