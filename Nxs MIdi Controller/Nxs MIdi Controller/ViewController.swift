@@ -17,17 +17,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var pitchBendView: WheelView!
     @IBOutlet weak var modulationView: WheelView!
     
+    var octavesForNoteKind : [NoteKind : [Int]] = [:]
+    
     func setupKeyboardCallbacks() {
         keyboardViewBottom.addKeyPressedCallback {
-            let note = Note(k: $0.kind, o: $0.octave + self.octaveOffset)
+            let octave = $0.octave + self.octaveOffset
+            
+            let note = Note(k: $0.kind, o: octave)
             let msg = Message(midiNote: note, velocity: 90, status: Note.Status.pressed)
             self.messageSender.send(message: msg)
+            
+            //add to octaves
+            if self.octavesForNoteKind[note.kind] == nil {
+                self.octavesForNoteKind[note.kind] = []
+            }
+            self.octavesForNoteKind[note.kind]?.append(octave)
         }
         
+        //might want to release on each octave for that note.
         keyboardViewBottom.addKeyReleasedCallback {
-            let note = Note(k: $0.kind, o: $0.octave + self.octaveOffset)
-            let msg = Message(midiNote: note, velocity: 90, status: Note.Status.released)
-            self.messageSender.send(message: msg)
+            guard let octaves = self.octavesForNoteKind[$0.kind] else {return}
+            for octave in octaves {
+                let note = Note(k: $0.kind, o: octave)
+                let msg = Message(midiNote: note, velocity: 90, status: Note.Status.released)
+                self.messageSender.send(message: msg)
+            }
         }
     }
     
