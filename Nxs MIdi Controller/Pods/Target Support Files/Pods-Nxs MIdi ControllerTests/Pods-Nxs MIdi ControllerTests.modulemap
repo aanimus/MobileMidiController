@@ -1,6 +1,0 @@
-framework module Pods_Nxs_MIdi_ControllerTests {
-  umbrella header "Pods-Nxs MIdi ControllerTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

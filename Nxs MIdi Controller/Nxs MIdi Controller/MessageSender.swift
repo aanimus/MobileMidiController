@@ -6,27 +6,45 @@
 //  Copyright © 2016 Nexiosoft. All rights reserved.
 //
 
-import UIKit
 import CocoaAsyncSocket
 
-class MessageSender: NSObject {
-    var udpSocket : AsyncUdpSocket
+class MessageSender: NSObject, GCDAsyncSocketDelegate, Connection {
+    
+    let mode = ConnectionMode.tcp
+    
+    var delegate: ConnectionDelegate?
+    
+    var socket = GCDAsyncSocket()
+    
     var host: String {
-        guard let app = UIApplication.sharedApplication().delegate as? AppDelegate else {
-            return "192.168.1.20"
-        }
-        
-        return app.host
+        let app = UIApplication.shared.delegate as! AppDelegate
+        return app.settings.host
     }
     
     override init() {
-        udpSocket = AsyncUdpSocket()
         super.init()
+        
+        let mainQueue = DispatchQueue.main
+        socket = GCDAsyncSocket(delegate: self, delegateQueue: mainQueue)
+        updateHost()
     }
     
-    func sendMessage(msg: Message) {
-        let data = NSData(bytes: msg.bytes, length: msg.bytes.count)
-        let success = udpSocket.sendData(data, toHost: host, port: 6000, withTimeout: -1, tag: 1)
-        print("sending message", success)
+    func send(message: Message) {
+        let data = Data(bytes: UnsafePointer<UInt8>(message.bytes), count: message.bytes.count)
+        socket?.write(data, withTimeout: -1, tag: 1)
+        print("trying to write")
+    }
+    
+    func socket(_ sock: GCDAsyncSocket!, didConnectToHost host: String!, port: UInt16) {
+        print("did connect")
+    }
+    
+    func updateHost() {
+        do {
+            print("trying to connect")
+            try socket?.connect(toHost: host, onPort: 6000);
+        } catch _ {
+            print("error connecting")
+        }
     }
 }

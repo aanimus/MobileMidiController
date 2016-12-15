@@ -8,10 +8,10 @@
 
 import Foundation
 
-func arrayRepeat<T>(arr: [T], num: Int) -> [T] {
+func repeatArray<T>(_ arr: [T], num: Int) -> [T] {
     var res : [T] = []
     for _ in 0..<num {
-        res.appendContentsOf(arr)
+        res.append(contentsOf: arr)
     }
     return res
 }

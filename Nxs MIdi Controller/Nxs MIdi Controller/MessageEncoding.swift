@@ -8,44 +8,83 @@
 
 import Foundation
 
-func between(a:UInt16, _ val:Int16, _ b:UInt16) -> UInt16 {
+func between(_ a:UInt16, _ val:Int16, _ b:UInt16) -> UInt16 {
     let res = max(Int(a), min(Int(val), Int(b)))
     return UInt16(res)
 }
 
+/*
+ TCP message protocol:
+ 
+ each message is a byte array.
+ (zero indexed)
+ byte[0]  contains the number of bytes in the message, not counting the first byte.
+ byte[1]  contains the message type.
+ byte[2:] content
+ */
+
+/*
+ Content protocol
+ 
+ Message type 0x1:
+ 3 midi command bytes
+ */
+
+enum MessageKind {
+    case end, midi
+    
+    func toByte() -> UInt8 {
+        switch self {
+        case .end:  return 0
+        case .midi: return 1
+        }
+    }
+    
+    static func fromByte(_ x:UInt8) -> MessageKind? {
+        switch x {
+        case 0: return .end
+        case 1: return .midi
+        case _: return nil
+        }
+    }
+}
+
 struct Message {
     
-    var bytes: [UInt8]
-    
-    init() {
-        self.bytes = []
+    var contentAndTypeSize: UInt8 {
+        return UInt8(content.count + 1) //potential crash here
     }
     
-    init(bytes: [UInt8]) {
-        self.bytes = bytes
+    var bytes: [UInt8] {
+        return [self.contentAndTypeSize, self.kind.toByte()] + self.content
+    }
+    
+    var kind: MessageKind
+    var content: [UInt8]
+    
+    init(content: [UInt8], kind: MessageKind) {
+        self.content = content
+        self.kind = kind
     }
 
-    static func encodeMidiNotePressed(note: Note, velocity: UInt8) -> Message {
-        return Message(bytes: [0xff, 0xff, 0x01, 0x90, note.toMidiNote(), velocity])
+    init(midiNote note: Note, velocity: UInt8, status: Note.Status) {
+        let statusCode : UInt8 = status == .pressed ? 0x90 : 0x80
+        self.init(content: [statusCode, note.toMidiNote(), velocity], kind: .midi)
     }
     
-    static func encodeMidiNoteReleased(note: Note, velocity: UInt8) -> Message {
-        return Message(bytes: [0xff, 0xff, 0x01, 0x80, note.toMidiNote(), velocity])
-    }
-    
-    static func encodeMidiPitchBend(offset : WheelFactor, factor : Float) -> Message {
+    init(midiPitchBendOffset offset : Float, factor : Float) {
         let basePitch : Int16 = 0x2000
         let realPitch : UInt16 = between(0x0000,
                                          basePitch + Int16(factor * offset * Float(0x2000)),
                                          0x4000)
         let firstData : UInt8 = UInt8(realPitch & 0b0000000001111111)
         let secondData : UInt8 = UInt8((realPitch & 0b0011111110000000) >> 7)
-        return Message(bytes: [0xff, 0xff, 0x01, 0xE0, firstData, secondData])
+        self.init(content: [0xE0, firstData, secondData], kind: .midi)
     }
     
-    static func encodeMidiModulation(offset : WheelFactor) -> Message {
+    init(midiModulationOffset offset : Float) {
         let secondData : UInt8 = UInt8(64 + Int8(64 * offset))
-        return Message(bytes: [0xff, 0xff, 0x01, 0xB0, 0x01, secondData])
+        self.init(content: [0xB0, 0x01, secondData], kind: .midi)
     }
 
 }

@@ -12,42 +12,47 @@ import Foundation
  * Enum for musical note kinds. Cs means C sharp
  */
 enum NoteKind {
-    case C, Cs, D, Ds, E, F, Fs, G, Gs, A, As, B
+    case c, cs, d, ds, e, f, fs, g, gs, a, `as`, b
 }
 
 /**
  * converts k to k0 in midi
  */
-func noteKindToMidiZero(k: NoteKind) -> UInt8 {
+func noteKindToMidiZero(_ k: NoteKind) -> UInt8 {
     switch k {
-    case .C:
+    case .c:
         return 0x18
-    case .Cs:
+    case .cs:
         return 0x19
-    case .D:
+    case .d:
         return 0x1a
-    case .Ds:
+    case .ds:
         return 0x1b
-    case .E:
+    case .e:
         return 0x1c
-    case .F:
+    case .f:
         return 0x1d
-    case .Fs:
+    case .fs:
         return 0x1e
-    case .G:
+    case .g:
         return 0x1f
-    case .Gs:
+    case .gs:
         return 0x20
-    case .A:
+    case .a:
         return 0x21
-    case .As:
+    case .as:
         return 0x22
-    case .B:
+    case .b:
         return 0x23
     }
 }
 
 struct Note {
+    
+    enum Status {
+        case released, pressed
+    }
+    
     var kind : NoteKind
     var octave : Int
     
@@ -61,20 +66,20 @@ struct Note {
     }
 }
 
-private func arrayOfNotes(noteKinds: [NoteKind], num: Int) -> [Note] {
+private func arrayOfNotes(_ noteKinds: [NoteKind], num: Int) -> [Note] {
     var notes : [Note] = []
     for i in 0..<num {
-        notes.appendContentsOf(noteKinds.map {Note(k: $0, o: i)})
+        notes.append(contentsOf: noteKinds.map {Note(k: $0, o: i)})
     }
     return notes
 }
 
-func standardNoteArray(numOfOctaves: Int) -> [Note] {
-    let noteKindArr : [NoteKind] = [.C, .Cs, .D, .Ds, .E, .F, .Fs, .G, .Gs, .A, .As, .B]
+func standardNoteArray(_ numOfOctaves: Int) -> [Note] {
+    let noteKindArr : [NoteKind] = [.c, .cs, .d, .ds, .e, .f, .fs, .g, .gs, .a, .as, .b]
     return arrayOfNotes(noteKindArr, num: numOfOctaves)
 }
 
-func nonAccidentalNoteArray(numOfOctaves: Int) -> [Note] {
-    let noteKindArr : [NoteKind] = [.C, .D, .E, .F, .G, .A, .B]
+func nonAccidentalNoteArray(_ numOfOctaves: Int) -> [Note] {
+    let noteKindArr : [NoteKind] = [.c, .d, .e, .f, .g, .a, .b]
     return arrayOfNotes(noteKindArr, num: numOfOctaves)
 }

@@ -6,11 +6,25 @@ PODS:
     - CocoaAsyncSocket/RunLoop
   - CocoaAsyncSocket/GCD (7.4.3)
   - CocoaAsyncSocket/RunLoop (7.4.3)
+  - PeerTalk (0.0.2)
 
 DEPENDENCIES:
   - CocoaAsyncSocket
+  - PeerTalk (from `https://github.com/rsms/peertalk.git`)
+
+EXTERNAL SOURCES:
+  PeerTalk:
+    :git: https://github.com/rsms/peertalk.git
+
+CHECKOUT OPTIONS:
+  PeerTalk:
+    :commit: 5de384b349a1d51fc148c45f8ce0ac46b9bce39e
+    :git: https://github.com/rsms/peertalk.git
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
+  PeerTalk: f5389c286e4d477e59b73dfbf25c5c70a2464761
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: d4549e5f77fae1785f8578b5c60bdecae6bc03ab
+
+COCOAPODS: 1.1.0.rc.2

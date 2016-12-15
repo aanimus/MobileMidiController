@@ -11,25 +11,25 @@
 import UIKit
 
 private enum KeyOffsetType {
-    case OffsetL, OffsetBlack, OffsetMiddle, OffsetFull
+    case offsetL, offsetBlack, offsetMiddle, offsetFull
 }
 
-private func offsetAmount(type: KeyOffsetType) -> Float {
+private func offsetAmount(_ type: KeyOffsetType) -> Float {
     switch type {
-    case .OffsetL:
+    case .offsetL:
         return 1.0
-    case .OffsetBlack:
+    case .offsetBlack:
         return 0.8
-    case .OffsetMiddle:
+    case .offsetMiddle:
         return 0.8
-    case .OffsetFull:
-        return (2.0 * offsetAmount(.OffsetL)
-            + 2.0 * offsetAmount(.OffsetBlack)
-            + offsetAmount(.OffsetMiddle)) / 3.0
+    case .offsetFull:
+        return (2.0 * offsetAmount(.offsetL)
+            + 2.0 * offsetAmount(.offsetBlack)
+            + offsetAmount(.offsetMiddle)) / 3.0
     }
 }
 
-private func generateOffsets(offsets: [KeyOffsetType]) -> [Float] {
+private func generateOffsets(_ offsets: [KeyOffsetType]) -> [Float] {
     var res : [Float] = []
     for offset in offsets {
         if res.count == 0 {
@@ -43,11 +43,11 @@ private func generateOffsets(offsets: [KeyOffsetType]) -> [Float] {
     return res
 }
 
-private let standardKeyboardOffsetTypes : [KeyOffsetType] = [.OffsetL, .OffsetBlack, .OffsetMiddle, .OffsetBlack, .OffsetL,
-                                                             .OffsetL, .OffsetBlack, .OffsetMiddle, .OffsetBlack, .OffsetMiddle, .OffsetBlack, .OffsetL]
-private let standardBottomKeyboardOffsetTypes = [KeyOffsetType](count: 7, repeatedValue: .OffsetFull)
+private let standardKeyboardOffsetTypes : [KeyOffsetType] = [.offsetL, .offsetBlack, .offsetMiddle, .offsetBlack, .offsetL,
+                                                             .offsetL, .offsetBlack, .offsetMiddle, .offsetBlack, .offsetMiddle, .offsetBlack, .offsetL]
+private let standardBottomKeyboardOffsetTypes = [KeyOffsetType](repeating: .offsetFull, count: 7)
 
-private func genScaledOffsets(scale: Float, width: Float, genOffsets: [Float]) -> [Float] {
+private func genScaledOffsets(_ scale: Float, width: Float, genOffsets: [Float]) -> [Float] {
     let numOfKeyboards : Int = Int(ceil(scale))
     
     var unscaledOffsets = genOffsets
@@ -57,7 +57,7 @@ private func genScaledOffsets(scale: Float, width: Float, genOffsets: [Float]) -
         nextOffsets.removeFirst()
         let lastOffset = unscaledOffsets.last!
         nextOffsets = nextOffsets.map {$0 + lastOffset}
-        unscaledOffsets.appendContentsOf(nextOffsets)
+        unscaledOffsets.append(contentsOf: nextOffsets)
     }
     
     return unscaledOffsets.map {
@@ -65,26 +65,26 @@ private func genScaledOffsets(scale: Float, width: Float, genOffsets: [Float]) -
     }
 }
 
-private func standardTopOffsetsWithScale(scale: Float, width: Float) -> [Float] {
+private func standardTopOffsetsWithScale(_ scale: Float, width: Float) -> [Float] {
     return genScaledOffsets(scale,
                             width: width,
                             genOffsets: generateOffsets(standardKeyboardOffsetTypes))
 }
 
-private func standardTopOffsetsWithScaleAndTypes(scale: Float, width: Float) -> ([Float], [KeyOffsetType]) {
+private func standardTopOffsetsWithScaleAndTypes(_ scale: Float, width: Float) -> ([Float], [KeyOffsetType]) {
     let numOfKeyboards = Int(ceil(scale))
     let scaledOffsets = standardTopOffsetsWithScale(scale, width: width)
-    let offsetTypes = arrayRepeat(standardKeyboardOffsetTypes, num: numOfKeyboards)
+    let offsetTypes = repeatArray(standardKeyboardOffsetTypes, num: numOfKeyboards)
     return (scaledOffsets, offsetTypes)
 }
 
-private func standardBottomOffsetsWithScale(scale: Float, width: Float) -> [Float] {
+private func standardBottomOffsetsWithScale(_ scale: Float, width: Float) -> [Float] {
     return genScaledOffsets(scale,
                             width: width,
                             genOffsets: generateOffsets(standardBottomKeyboardOffsetTypes))
 }
 
-private func indexOfOffset(offset: CGFloat, arr: [CGFloat]) -> Int {
+private func indexOfOffset(_ offset: CGFloat, arr: [CGFloat]) -> Int {
     for i in 0..<arr.count {
         let j = i+1
         if j < arr.count {
@@ -102,8 +102,8 @@ private func indexOfOffset(offset: CGFloat, arr: [CGFloat]) -> Int {
 class KeyboardView: UIView {
     
     typealias KeyboardCallback = ((Note) -> Void)
-    private var onPressCallbacks : [KeyboardCallback] = []
-    private var onReleaseCallbacks : [KeyboardCallback] = []
+    fileprivate var onPressCallbacks : [KeyboardCallback] = []
+    fileprivate var onReleaseCallbacks : [KeyboardCallback] = []
     
     ///how many times a keyboard length (C to B) is visible on screen.
     ///1.0 means a keyboard with keys C to B
@@ -137,38 +137,38 @@ class KeyboardView: UIView {
         return img
     }()
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         /*
         let path : UIBezierPath = UIBezierPath(roundedRect: CGRect(x:0, y:0, width:20, height: 20) , cornerRadius: 10)
         UIColor.blackColor().setFill()
         path.fill()*/
-        multipleTouchEnabled = true// TODO move this to viewcontroller
+        isMultipleTouchEnabled = true// TODO move this to viewcontroller
         drawLowerKeys(rect)
         drawUpperKeys(rect)
     }
     
-    func addKeyPressedCallback(callback: KeyboardCallback) {
+    func addKeyPressedCallback(_ callback: @escaping KeyboardCallback) {
         onPressCallbacks.append(callback)
     }
     
-    func addKeyReleasedCallback(callback: KeyboardCallback) {
+    func addKeyReleasedCallback(_ callback: @escaping KeyboardCallback) {
         onReleaseCallbacks.append(callback)
     }
     
-    private func keyPressed(note: Note) {
+    fileprivate func keyPressed(_ note: Note) {
         onPressCallbacks.forEach {$0(note)}
     }
     
-    private func keyReleased(note: Note) {
+    fileprivate func keyReleased(_ note: Note) {
         onReleaseCallbacks.forEach {$0(note)}
     }
     
-    func isInUpperSection(y: CGFloat) -> Bool {
+    func isInUpperSection(_ y: CGFloat) -> Bool {
         return y < (topKeyScale * self.frame.height)
     }
     
-    func drawLowerKeys(rect: CGRect) {
-        UIColor.blackColor().setStroke()
+    func drawLowerKeys(_ rect: CGRect) {
+        UIColor.black.setStroke()
         let keyOffsets : [CGFloat] = scaledOffsetsBottom
         
         for i in 1..<keyOffsets.count {
@@ -178,12 +178,12 @@ class KeyboardView: UIView {
         }
     }
     
-    func drawUpperKeys(rect: CGRect) {
-        UIColor.blackColor().setFill()
+    func drawUpperKeys(_ rect: CGRect) {
+        UIColor.black.setFill()
         let (offsets, offsetTypes) = standardTopOffsetsWithScaleAndTypes(horizScale, width: Float(rect.width))
         
         for i in 1..<offsets.count {
-            if offsetTypes[i-1] == KeyOffsetType.OffsetBlack {
+            if offsetTypes[i-1] == KeyOffsetType.offsetBlack {
                 let (left, right) = (CGFloat(offsets[i-1]), CGFloat(offsets[i]))
                 
                 let rectWidth = CGFloat(right - left);
@@ -191,26 +191,26 @@ class KeyboardView: UIView {
                 let rectY = rect.height * topKeyScale - rectHeight
                 
                 let bottomRect = CGRect(x: left, y: rectY, width: rectWidth, height: rectHeight)
-                blackKeyBottomImage.drawInRect(bottomRect)
+                blackKeyBottomImage.draw(in: bottomRect)
                 
                 let topRect = CGRect(x: left, y: 0, width: rectWidth, height: rectY+1)
-                blackKeyUpperImage.drawInRect(topRect)
+                blackKeyUpperImage.draw(in: topRect)
             }
         }
     }
 
-    private var activeTouches : [(UITouch,Note)] = []
+    fileprivate var activeTouches : [(UITouch,Note)] = []
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         touches.forEach {
-            let (x,y) = ($0.locationInView(self).x, $0.locationInView(self).y)
+            let (x,y) = ($0.location(in: self).x, $0.location(in: self).y)
             let note = isInUpperSection(y) ? noteForKeyTouchedUpper(x) : noteForKeyTouchedLower(x)
             activeTouches.append(($0, note))
             keyPressed(note)
         }
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         touches.forEach {touch in
             for i in 0..<activeTouches.count {
                 if i < 0 || i >= activeTouches.count {
@@ -218,20 +218,20 @@ class KeyboardView: UIView {
                 }
                 let (t,n) = activeTouches[i]
                 if t == touch {
-                    activeTouches.removeAtIndex(i)
+                    activeTouches.remove(at: i)
                     keyReleased(n)
                 }
             }
         }
     }
     
-    func noteForKeyTouchedUpper(x: CGFloat) -> Note {
+    func noteForKeyTouchedUpper(_ x: CGFloat) -> Note {
         let i = indexOfOffset(x, arr: scaledOffsetsTop)
         let stdNotes = standardNoteArray(Int(ceil(horizScale)))
         return stdNotes[i]
     }
     
-    func noteForKeyTouchedLower(x: CGFloat) -> Note {
+    func noteForKeyTouchedLower(_ x: CGFloat) -> Note {
         let i = indexOfOffset(x, arr: scaledOffsetsBottom)
         let stdNotes = nonAccidentalNoteArray(Int(ceil(horizScale)))
         return stdNotes[i]

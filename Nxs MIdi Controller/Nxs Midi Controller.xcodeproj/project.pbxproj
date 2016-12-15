@@ -7,9 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C158142EA8D9AC479D9067E9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585C8678396BA22ED86F1DC1 /* Pods.framework */; };
+		12379B6A831DA42179D62C4D /* Pods_Nxs_MIdi_Controller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456BC8BEB4712C2F54AEDC01 /* Pods_Nxs_MIdi_Controller.framework */; };
+		527DADBF06E43DC9B178CB13 /* Pods_NxsMidiMacClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A642D488796E93CDCAA12F4 /* Pods_NxsMidiMacClient.framework */; };
 		CC04FEBA1CF5657700E9CDCE /* MessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC04FEB91CF5657700E9CDCE /* MessageSender.swift */; };
 		CC04FEBC1CF9F3E500E9CDCE /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC04FEBB1CF9F3E500E9CDCE /* WheelView.swift */; };
+		CC2177751E01B8A300F09CD3 /* UsbConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2177741E01B8A300F09CD3 /* UsbConnection.swift */; };
+		CC2177771E01B97800F09CD3 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2177761E01B97800F09CD3 /* Connection.swift */; };
+		CC21777D1E01BB7F00F09CD3 /* ConnectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC21777C1E01BB7F00F09CD3 /* ConnectionProtocol.swift */; };
+		CC21777F1E0216C800F09CD3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC21777E1E0216C800F09CD3 /* Settings.swift */; };
+		CC2177A21E02260400F09CD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2177A11E02260400F09CD3 /* AppDelegate.swift */; };
+		CC2177A41E02260400F09CD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2177A31E02260400F09CD3 /* ViewController.swift */; };
+		CC2177A61E02260400F09CD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC2177A51E02260400F09CD3 /* Assets.xcassets */; };
+		CC2177A91E02260400F09CD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2177A71E02260400F09CD3 /* Main.storyboard */; };
+		CC2177AF1E0229FC00F09CD3 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4899F1CF4A0E800E99677 /* Keys.swift */; };
+		CC2177B01E0229FC00F09CD3 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2177761E01B97800F09CD3 /* Connection.swift */; };
+		CC2177B11E0229FC00F09CD3 /* ConnectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC21777C1E01BB7F00F09CD3 /* ConnectionProtocol.swift */; };
+		CC2177B21E0229FC00F09CD3 /* MessageEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD7555D1CF553CD0082AEC2 /* MessageEncoding.swift */; };
+		CC2177B51E022ACA00F09CD3 /* UsbMacConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2177B41E022ACA00F09CD3 /* UsbMacConnection.swift */; };
+		CC2177B71E02448E00F09CD3 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2177B61E02448E00F09CD3 /* CoreMIDI.framework */; };
 		CC72C6931CF3C89100CAF231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72C6921CF3C89100CAF231 /* AppDelegate.swift */; };
 		CC72C6951CF3C89100CAF231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72C6941CF3C89100CAF231 /* ViewController.swift */; };
 		CC72C6981CF3C89100CAF231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC72C6961CF3C89100CAF231 /* Main.storyboard */; };
@@ -37,11 +52,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D2E67A998013B4CA05D5461 /* Pods_Nxs_MIdi_ControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nxs_MIdi_ControllerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C4D13677B50CD9CC9549C04 /* Pods-Nxs MIdi Controller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nxs MIdi Controller.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nxs MIdi Controller/Pods-Nxs MIdi Controller.release.xcconfig"; sourceTree = "<group>"; };
+		3A642D488796E93CDCAA12F4 /* Pods_NxsMidiMacClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NxsMidiMacClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1CBD1743A345E6DD7007F5 /* Pods-NxsMidiMacClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NxsMidiMacClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NxsMidiMacClient/Pods-NxsMidiMacClient.debug.xcconfig"; sourceTree = "<group>"; };
+		456BC8BEB4712C2F54AEDC01 /* Pods_Nxs_MIdi_Controller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nxs_MIdi_Controller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		585C8678396BA22ED86F1DC1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5CB92D48FB251E07A0479691 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		7487DF9CAECE65063915AD29 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		75E244569595958210B301B5 /* Pods-NxsMidiMacClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NxsMidiMacClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-NxsMidiMacClient/Pods-NxsMidiMacClient.release.xcconfig"; sourceTree = "<group>"; };
+		9810410069A12B85A21FCD80 /* Pods-Nxs MIdi Controller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nxs MIdi Controller.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nxs MIdi Controller/Pods-Nxs MIdi Controller.debug.xcconfig"; sourceTree = "<group>"; };
 		CC04FEB91CF5657700E9CDCE /* MessageSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageSender.swift; sourceTree = "<group>"; };
 		CC04FEBB1CF9F3E500E9CDCE /* WheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
+		CC2177741E01B8A300F09CD3 /* UsbConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsbConnection.swift; sourceTree = "<group>"; };
+		CC2177761E01B97800F09CD3 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		CC21777C1E01BB7F00F09CD3 /* ConnectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionProtocol.swift; sourceTree = "<group>"; };
+		CC21777E1E0216C800F09CD3 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		CC21779F1E02260300F09CD3 /* NxsMidiMacClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NxsMidiMacClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC2177A11E02260400F09CD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC2177A31E02260400F09CD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC2177A51E02260400F09CD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC2177A81E02260400F09CD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC2177AA1E02260400F09CD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC2177B41E022ACA00F09CD3 /* UsbMacConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsbMacConnection.swift; sourceTree = "<group>"; };
+		CC2177B61E02448E00F09CD3 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CoreMIDI.framework; sourceTree = DEVELOPER_DIR; };
 		CC72C68F1CF3C89100CAF231 /* Nxs Midi Controller.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nxs Midi Controller.temp_caseinsensitive_rename.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC72C6921CF3C89100CAF231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC72C6941CF3C89100CAF231 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,11 +92,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CC21779C1E02260300F09CD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC2177B71E02448E00F09CD3 /* CoreMIDI.framework in Frameworks */,
+				527DADBF06E43DC9B178CB13 /* Pods_NxsMidiMacClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC72C68C1CF3C89100CAF231 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C158142EA8D9AC479D9067E9 /* Pods.framework in Frameworks */,
+				12379B6A831DA42179D62C4D /* Pods_Nxs_MIdi_Controller.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +119,93 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9A0566FA190060112CB01560 /* Pods */ = {
+		0E30B432C1B39D06CDBBCD1C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5CB92D48FB251E07A0479691 /* Pods.debug.xcconfig */,
-				7487DF9CAECE65063915AD29 /* Pods.release.xcconfig */,
+				9810410069A12B85A21FCD80 /* Pods-Nxs MIdi Controller.debug.xcconfig */,
+				2C4D13677B50CD9CC9549C04 /* Pods-Nxs MIdi Controller.release.xcconfig */,
+				3D1CBD1743A345E6DD7007F5 /* Pods-NxsMidiMacClient.debug.xcconfig */,
+				75E244569595958210B301B5 /* Pods-NxsMidiMacClient.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CC2177731E01B86B00F09CD3 /* MessageModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC2177741E01B8A300F09CD3 /* UsbConnection.swift */,
+				CC04FEB91CF5657700E9CDCE /* MessageSender.swift */,
+			);
+			name = MessageModel;
+			sourceTree = "<group>";
+		};
+		CC2177781E01BA0F00F09CD3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CCFD96A31D09B3B2006843CA /* SettingsViewController.swift */,
+				CC72C6941CF3C89100CAF231 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CC2177791E01BA3B00F09CD3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC04FEBB1CF9F3E500E9CDCE /* WheelView.swift */,
+				CC72C6A61CF3C9CC00CAF231 /* KeyboardView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CC21777A1E01BA5400F09CD3 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				CC72C6961CF3C89100CAF231 /* Main.storyboard */,
+				CC72C69B1CF3C89100CAF231 /* LaunchScreen.storyboard */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
+		CC21777B1E01BA7000F09CD3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CCE4899C1CF49BB300E99677 /* Utils.swift */,
+				CC21777E1E0216C800F09CD3 /* Settings.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		CC2177A01E02260400F09CD3 /* NxsMidiMacClient */ = {
+			isa = PBXGroup;
+			children = (
+				CC2177A11E02260400F09CD3 /* AppDelegate.swift */,
+				CC2177B41E022ACA00F09CD3 /* UsbMacConnection.swift */,
+				CC2177B31E022A7A00F09CD3 /* Controllers */,
+				CC2177A51E02260400F09CD3 /* Assets.xcassets */,
+				CC2177A71E02260400F09CD3 /* Main.storyboard */,
+				CC2177AA1E02260400F09CD3 /* Info.plist */,
+			);
+			path = NxsMidiMacClient;
+			sourceTree = "<group>";
+		};
+		CC2177AE1E02261E00F09CD3 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CCE4899F1CF4A0E800E99677 /* Keys.swift */,
+				CC2177761E01B97800F09CD3 /* Connection.swift */,
+				CC21777C1E01BB7F00F09CD3 /* ConnectionProtocol.swift */,
+				CCD7555D1CF553CD0082AEC2 /* MessageEncoding.swift */,
+			);
+			name = Shared;
+			path = "Nxs MIdi Controller";
+			sourceTree = "<group>";
+		};
+		CC2177B31E022A7A00F09CD3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CC2177A31E02260400F09CD3 /* ViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		CC72C6861CF3C89100CAF231 = {
@@ -92,9 +213,11 @@
 			children = (
 				CC72C6911CF3C89100CAF231 /* Nxs Midi Controller */,
 				CCE489901CF3F92D00E99677 /* Nxs MIdi ControllerTests */,
+				CC2177A01E02260400F09CD3 /* NxsMidiMacClient */,
+				CC2177AE1E02261E00F09CD3 /* Shared */,
 				CC72C6901CF3C89100CAF231 /* Products */,
-				9A0566FA190060112CB01560 /* Pods */,
 				E2D8F0A722D954EE34CA4B11 /* Frameworks */,
+				0E30B432C1B39D06CDBBCD1C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +226,7 @@
 			children = (
 				CC72C68F1CF3C89100CAF231 /* Nxs Midi Controller.temp_caseinsensitive_rename.app */,
 				CCE4898F1CF3F92D00E99677 /* Nxs Midi Controller.temp_caseinsensitive_rename.xctest */,
+				CC21779F1E02260300F09CD3 /* NxsMidiMacClient.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,18 +234,13 @@
 		CC72C6911CF3C89100CAF231 /* Nxs Midi Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CCE4899C1CF49BB300E99677 /* Utils.swift */,
-				CC72C6A61CF3C9CC00CAF231 /* KeyboardView.swift */,
-				CCE4899F1CF4A0E800E99677 /* Keys.swift */,
 				CC72C6921CF3C89100CAF231 /* AppDelegate.swift */,
-				CC72C6941CF3C89100CAF231 /* ViewController.swift */,
-				CCD7555D1CF553CD0082AEC2 /* MessageEncoding.swift */,
-				CC04FEB91CF5657700E9CDCE /* MessageSender.swift */,
-				CC72C6961CF3C89100CAF231 /* Main.storyboard */,
-				CCFD96A31D09B3B2006843CA /* SettingsViewController.swift */,
-				CC04FEBB1CF9F3E500E9CDCE /* WheelView.swift */,
+				CC2177731E01B86B00F09CD3 /* MessageModel */,
+				CC2177781E01BA0F00F09CD3 /* Controllers */,
+				CC2177791E01BA3B00F09CD3 /* Views */,
+				CC21777B1E01BA7000F09CD3 /* Helpers */,
+				CC21777A1E01BA5400F09CD3 /* GUI */,
 				CC72C6991CF3C89100CAF231 /* Assets.xcassets */,
-				CC72C69B1CF3C89100CAF231 /* LaunchScreen.storyboard */,
 				CC72C69E1CF3C89100CAF231 /* Info.plist */,
 			);
 			name = "Nxs Midi Controller";
@@ -140,7 +259,11 @@
 		E2D8F0A722D954EE34CA4B11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC2177B61E02448E00F09CD3 /* CoreMIDI.framework */,
 				585C8678396BA22ED86F1DC1 /* Pods.framework */,
+				456BC8BEB4712C2F54AEDC01 /* Pods_Nxs_MIdi_Controller.framework */,
+				0D2E67A998013B4CA05D5461 /* Pods_Nxs_MIdi_ControllerTests.framework */,
+				3A642D488796E93CDCAA12F4 /* Pods_NxsMidiMacClient.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,16 +271,36 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CC21779E1E02260300F09CD3 /* NxsMidiMacClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC2177AB1E02260400F09CD3 /* Build configuration list for PBXNativeTarget "NxsMidiMacClient" */;
+			buildPhases = (
+				C69A0AB4BF2134D1A5C2E4BD /* [CP] Check Pods Manifest.lock */,
+				CC21779B1E02260300F09CD3 /* Sources */,
+				CC21779C1E02260300F09CD3 /* Frameworks */,
+				CC21779D1E02260300F09CD3 /* Resources */,
+				37F165A1DB6C555CC1EC0F0A /* [CP] Embed Pods Frameworks */,
+				A7340F46BD025C9A4EA433AE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NxsMidiMacClient;
+			productName = NxsMidiMacClient;
+			productReference = CC21779F1E02260300F09CD3 /* NxsMidiMacClient.app */;
+			productType = "com.apple.product-type.application";
+		};
 		CC72C68E1CF3C89100CAF231 /* Nxs MIdi Controller */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC72C6A11CF3C89100CAF231 /* Build configuration list for PBXNativeTarget "Nxs MIdi Controller" */;
 			buildPhases = (
-				0285800CD4A1A5C235724EFC /* Check Pods Manifest.lock */,
+				3D18AFC0B7C23772AC29993B /* [CP] Check Pods Manifest.lock */,
 				CC72C68B1CF3C89100CAF231 /* Sources */,
 				CC72C68C1CF3C89100CAF231 /* Frameworks */,
 				CC72C68D1CF3C89100CAF231 /* Resources */,
-				71CE57BFCC39080452EEF7B5 /* Embed Pods Frameworks */,
-				322656A4EAF4F124E81AD91B /* Copy Pods Resources */,
+				01049F04A4F4F8B5ED917965 /* [CP] Embed Pods Frameworks */,
+				C5A53FB29C80211CA08E3CF7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,15 +335,23 @@
 		CC72C6871CF3C89100CAF231 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Nexiosoft;
 				TargetAttributes = {
+					CC21779E1E02260300F09CD3 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = TD73A242XE;
+						ProvisioningStyle = Automatic;
+					};
 					CC72C68E1CF3C89100CAF231 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = TD73A242XE;
+						LastSwiftMigration = 0810;
 					};
 					CCE4898E1CF3F92D00E99677 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = CC72C68E1CF3C89100CAF231;
 					};
 				};
@@ -220,11 +371,21 @@
 			targets = (
 				CC72C68E1CF3C89100CAF231 /* Nxs MIdi Controller */,
 				CCE4898E1CF3F92D00E99677 /* Nxs MIdi ControllerTests */,
+				CC21779E1E02260300F09CD3 /* NxsMidiMacClient */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CC21779D1E02260300F09CD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC2177A61E02260400F09CD3 /* Assets.xcassets in Resources */,
+				CC2177A91E02260400F09CD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC72C68D1CF3C89100CAF231 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,61 +406,124 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0285800CD4A1A5C235724EFC /* Check Pods Manifest.lock */ = {
+		01049F04A4F4F8B5ED917965 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nxs MIdi Controller/Pods-Nxs MIdi Controller-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		322656A4EAF4F124E81AD91B /* Copy Pods Resources */ = {
+		37F165A1DB6C555CC1EC0F0A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NxsMidiMacClient/Pods-NxsMidiMacClient-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		71CE57BFCC39080452EEF7B5 /* Embed Pods Frameworks */ = {
+		3D18AFC0B7C23772AC29993B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A7340F46BD025C9A4EA433AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NxsMidiMacClient/Pods-NxsMidiMacClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5A53FB29C80211CA08E3CF7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nxs MIdi Controller/Pods-Nxs MIdi Controller-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C69A0AB4BF2134D1A5C2E4BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CC21779B1E02260300F09CD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC2177B21E0229FC00F09CD3 /* MessageEncoding.swift in Sources */,
+				CC2177A41E02260400F09CD3 /* ViewController.swift in Sources */,
+				CC2177AF1E0229FC00F09CD3 /* Keys.swift in Sources */,
+				CC2177A21E02260400F09CD3 /* AppDelegate.swift in Sources */,
+				CC2177B51E022ACA00F09CD3 /* UsbMacConnection.swift in Sources */,
+				CC2177B01E0229FC00F09CD3 /* Connection.swift in Sources */,
+				CC2177B11E0229FC00F09CD3 /* ConnectionProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC72C68B1CF3C89100CAF231 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC21777F1E0216C800F09CD3 /* Settings.swift in Sources */,
 				CCD7555E1CF553CD0082AEC2 /* MessageEncoding.swift in Sources */,
+				CC2177771E01B97800F09CD3 /* Connection.swift in Sources */,
 				CC72C6A71CF3C9CC00CAF231 /* KeyboardView.swift in Sources */,
+				CC2177751E01B8A300F09CD3 /* UsbConnection.swift in Sources */,
 				CC04FEBC1CF9F3E500E9CDCE /* WheelView.swift in Sources */,
+				CC21777D1E01BB7F00F09CD3 /* ConnectionProtocol.swift in Sources */,
 				CC72C6951CF3C89100CAF231 /* ViewController.swift in Sources */,
 				CC04FEBA1CF5657700E9CDCE /* MessageSender.swift in Sources */,
 				CC72C6931CF3C89100CAF231 /* AppDelegate.swift in Sources */,
@@ -331,6 +555,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CC2177A71E02260400F09CD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC2177A81E02260400F09CD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		CC72C6961CF3C89100CAF231 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -350,6 +582,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CC2177AC1E02260400F09CD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D1CBD1743A345E6DD7007F5 /* Pods-NxsMidiMacClient.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TD73A242XE;
+				INFOPLIST_FILE = NxsMidiMacClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nexiosoft.NxsMidiMacClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CC2177AD1E02260400F09CD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75E244569595958210B301B5 /* Pods-NxsMidiMacClient.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TD73A242XE;
+				INFOPLIST_FILE = NxsMidiMacClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nexiosoft.NxsMidiMacClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		CC72C69F1CF3C89100CAF231 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -437,27 +713,31 @@
 		};
 		CC72C6A21CF3C89100CAF231 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CB92D48FB251E07A0479691 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 9810410069A12B85A21FCD80 /* Pods-Nxs MIdi Controller.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TD73A242XE;
 				INFOPLIST_FILE = "Nxs MIdi Controller/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nexiosoft.Nxs-Midi-Controller";
 				PRODUCT_NAME = "Nxs Midi Controller.temp_caseinsensitive_rename";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		CC72C6A31CF3C89100CAF231 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7487DF9CAECE65063915AD29 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 2C4D13677B50CD9CC9549C04 /* Pods-Nxs MIdi Controller.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TD73A242XE;
 				INFOPLIST_FILE = "Nxs MIdi Controller/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nexiosoft.Nxs-Midi-Controller";
 				PRODUCT_NAME = "Nxs Midi Controller.temp_caseinsensitive_rename";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -469,6 +749,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nexiosoft.Nxs-MIdi-ControllerTests";
 				PRODUCT_NAME = "Nxs Midi Controller.temp_caseinsensitive_rename";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nxs Midi Controller.temp_caseinsensitive_rename.app/Nxs Midi Controller.temp_caseinsensitive_rename";
 			};
 			name = Debug;
@@ -481,6 +762,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nexiosoft.Nxs-MIdi-ControllerTests";
 				PRODUCT_NAME = "Nxs Midi Controller.temp_caseinsensitive_rename";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nxs Midi Controller.temp_caseinsensitive_rename.app/Nxs Midi Controller.temp_caseinsensitive_rename";
 			};
 			name = Release;
@@ -488,6 +770,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CC2177AB1E02260400F09CD3 /* Build configuration list for PBXNativeTarget "NxsMidiMacClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC2177AC1E02260400F09CD3 /* Debug */,
+				CC2177AD1E02260400F09CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CC72C68A1CF3C89100CAF231 /* Build configuration list for PBXProject "Nxs Midi Controller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

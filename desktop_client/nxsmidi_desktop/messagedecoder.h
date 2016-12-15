@@ -2,6 +2,8 @@
 #define MESSAGEDECODER_H
 
 #include <QObject>
+#include <QTcpServer>
+#include <QTcpSocket>
 #include <QUdpSocket>
 #include <QHostAddress>
 #include <functional>
@@ -16,23 +18,26 @@ public:
     explicit MessageDecoder(QObject *parent = 0);
     void setProcessMidiMessage(std::function<void(MidiMessage)> f);
 private slots:
-    void readDatagrams();
+    void acceptNewConnections();
+    void readTcpMessage();
 private:
-    enum DataStatusMode {
-        NotReading,
-        WaitingForF,
-        WaitingForMessageType,
-        ReadingMidiStatus,
-        ReadingMidiData
+
+    enum DataMode {
+        WaitingForSize,
+        Reading
     };
-    DataStatusMode readingStatus = NotReading;
-    int bytesRemaining;
-    MidiMessage msg;
     
     void processData(unsigned char data);
+    void prepare_to_process();
+
     std::function<void(MidiMessage)> processMidiMessage;
-    
-    QUdpSocket *udpSocket;
+
+    QTcpServer *m_tcp_server;
+    QTcpSocket *m_socket;
+
+    std::vector<unsigned char> m_bytes_so_far;
+    DataMode m_data_mode;
+    uint8_t m_remaining_bytes;
 };
 
 #endif // MESSAGEDECODER_H

@@ -23,7 +23,7 @@ class WheelView: UIView {
     var wheelOffset : CGFloat = 0.0
     var maintainPositionAfterTouch = false
     
-    func onWheelChanged(callback: ((WheelFactor) -> ())) {
+    func onWheelChanged(_ callback: @escaping ((WheelFactor) -> ())) {
         wheelDidChangeCallbacks.append(callback)
     }
     
@@ -34,30 +34,30 @@ class WheelView: UIView {
         }
     }
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         let y = rect.origin.y + rect.height/2 - indicatorHeight/2 - wheelOffset * rect.height/2
         let r = CGRect(x: rect.origin.x, y: y,
                        width: rect.width, height: indicatorHeight)
-        UIColor.blackColor().setFill()
+        UIColor.black.setFill()
         UIBezierPath(rect: r).fill()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        touches.forEach {self.touchAt($0.locationInView(self))}
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        touches.forEach {self.touchAt($0.location(in: self))}
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        touches.forEach {self.touchAt($0.locationInView(self))}
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        touches.forEach {self.touchAt($0.location(in: self))}
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if !maintainPositionAfterTouch {
             wheelOffset = 0.0
             wheelDidChange()
         }
     }
     
-    func touchAt(point: CGPoint) {
+    func touchAt(_ point: CGPoint) {
         wheelOffset = 1 - point.y * 2 / self.frame.height
         wheelDidChange()
     }

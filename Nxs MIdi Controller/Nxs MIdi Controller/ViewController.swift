@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var octaveOffset : Int = 3
-    var messageSender = MessageSender()
+    var messageSender : Connection = UsbConnection()
     @IBOutlet weak var keyboardViewBottom: KeyboardView!
     @IBOutlet weak var octaveLabel: UILabel!
     @IBOutlet weak var pitchBendView: WheelView!
@@ -20,28 +20,28 @@ class ViewController: UIViewController {
     func setupKeyboardCallbacks() {
         keyboardViewBottom.addKeyPressedCallback {
             let note = Note(k: $0.kind, o: $0.octave + self.octaveOffset)
-            let msg = Message.encodeMidiNotePressed(note, velocity: 90)
-            self.messageSender.sendMessage(msg)
+            let msg = Message(midiNote: note, velocity: 90, status: Note.Status.pressed)
+            self.messageSender.send(message: msg)
         }
         
         keyboardViewBottom.addKeyReleasedCallback {
             let note = Note(k: $0.kind, o: $0.octave + self.octaveOffset)
-            let msg = Message.encodeMidiNoteReleased(note, velocity: 90)
-            self.messageSender.sendMessage(msg)
+            let msg = Message(midiNote: note, velocity: 90, status: Note.Status.released)
+            self.messageSender.send(message: msg)
         }
     }
     
     func setupWheels() {
         pitchBendView.onWheelChanged {
-            let msg = Message.encodeMidiPitchBend($0, factor: 1.0)
-            self.messageSender.sendMessage(msg)
+            let msg = Message(midiPitchBendOffset: $0, factor: 1.0)
+            self.messageSender.send(message: msg)
             print("pitch")
         }
         
         modulationView.maintainPositionAfterTouch = true
         modulationView.onWheelChanged {
-            let msg = Message.encodeMidiModulation($0)
-            self.messageSender.sendMessage(msg)
+            let msg = Message(midiModulationOffset: $0)
+            self.messageSender.send(message: msg)
             print("mod")
         }
     }
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         octaveLabel.text = String(octaveOffset)
     }
     
-    @IBAction func changeOctave(sender: UIButton) {
+    @IBAction func changeOctave(_ sender: UIButton) {
         guard let title = sender.currentTitle else {
             return
         }
@@ -76,19 +76,28 @@ class ViewController: UIViewController {
         updateUI()
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = true
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+        
+        let app = UIApplication.shared.delegate as! AppDelegate
+        let mode = app.settings.connectionMode
+        
+        if mode != self.messageSender.mode {
+            if mode == .tcp {
+                self.messageSender = MessageSender()
+            } else { //usb
+                self.messageSender = UsbConnection()
+            }
+        }
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = false
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
