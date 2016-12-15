@@ -13,6 +13,9 @@ class UsbConnection: NSObject, Connection {
     
     let mode = ConnectionMode.usb
     
+    let queue = DispatchQueue.init(label: "nxs_midi_peerChannelSendFrame",
+                                   attributes: DispatchQueue.Attributes(rawValue: 0))
+    
     var delegate: ConnectionDelegate?
     var servChannel: PTChannel?
     var peerChannel: PTChannel?
@@ -37,9 +40,13 @@ class UsbConnection: NSObject, Connection {
         let payload = DispatchData(bytes: ptr) as __DispatchData
         
         let type = message.kind.toUsbType()
-        peerChannel?.sendFrame(ofType: type, tag: PTFrameNoTag, withPayload: payload) {
-            err in
-            print("sent usb message with \(err)")
+        
+        //atmoically send message
+        queue.sync {
+            peerChannel?.sendFrame(ofType: type, tag: PTFrameNoTag, withPayload: payload) {
+                err in
+                print("sent usb message with \(err)")
+            }
         }
     }
 }

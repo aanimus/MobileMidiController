@@ -9,7 +9,7 @@
 import Foundation
 
 /**
- * Enum for musical note kinds. Cs means C sharp
+ * Enum for types of musical notes. Cs means C sharp
  */
 enum NoteKind {
     case c, cs, d, ds, e, f, fs, g, gs, a, `as`, b

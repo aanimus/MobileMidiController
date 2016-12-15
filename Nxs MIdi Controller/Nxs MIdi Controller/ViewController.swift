@@ -16,15 +16,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var octaveLabel: UILabel!
     @IBOutlet weak var pitchBendView: WheelView!
     @IBOutlet weak var modulationView: WheelView!
+    @IBOutlet weak var velocitySlider: UISlider!
     
     var octavesForNoteKind : [NoteKind : [Int]] = [:]
     
     func setupKeyboardCallbacks() {
         keyboardViewBottom.addKeyPressedCallback {
+            let velocity = UInt8(self.velocitySlider.value * 128)
+            
             let octave = $0.octave + self.octaveOffset
             
             let note = Note(k: $0.kind, o: octave)
-            let msg = Message(midiNote: note, velocity: 90, status: Note.Status.pressed)
+            let msg = Message(midiNote: note, velocity: velocity, status: Note.Status.pressed)
             self.messageSender.send(message: msg)
             
             //add to octaves

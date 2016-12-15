@@ -107,7 +107,7 @@ class KeyboardView: UIView {
     
     ///how many times a keyboard length (C to B) is visible on screen.
     ///1.0 means a keyboard with keys C to B
-    var horizScale : Float = 1.2
+    var horizScale : Float = 1.35
     var topKeyScale : CGFloat = 0.6 //must be ∈ [0.0, 1.0]
     var scaledOffsetsTop : [CGFloat] {
         get {
